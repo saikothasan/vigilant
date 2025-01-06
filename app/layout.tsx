@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   verification: {
-    google: 'your-google-verification-code',
+    google: 'VFOQfy__erVvmj4v6M9wXQ7kfOrsIephtjouoPrg3NE',
   }
 }
 
