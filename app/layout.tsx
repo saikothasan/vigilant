@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Header } from './components/header'
+import { Footer } from './components/footer'
+import { TelegramBanner } from './components/telegram-banner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,7 +11,7 @@ export const metadata: Metadata = {
   title: 'AI Prompt Generator - Create Creative Prompts with Gemini AI',
   description: 'Generate creative AI prompts using Google\'s Gemini AI models. Create, save, and manage prompts for any topic with our easy-to-use interface.',
   keywords: ['AI prompts', 'Gemini AI', 'prompt generator', 'creative writing', 'AI tools'],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'saikothasan' }],
   openGraph: {
     title: 'AI Prompt Generator - Create Creative Prompts with Gemini AI',
     description: 'Generate creative AI prompts using Google\'s Gemini AI models. Create, save, and manage prompts for any topic with our easy-to-use interface.',
@@ -58,7 +61,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="relative flex min-h-screen flex-col">
+          <TelegramBanner />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }
